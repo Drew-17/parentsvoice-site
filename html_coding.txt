@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parents’ Voice USA</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Header + Navigation -->
+  <header id="home" class="site-header">
+    <div class="logo">
+      <img src="logo.png" alt="Parents’ Voice USA logo" />
+    </div>
+    <nav class="main-nav">
+      <a href="#home">Home</a>
+      <a href="#mission">Mission</a>
+      <a href="#team">Meet Our Team</a>
+      <a href="#sponsors">Sponsors</a>
+      <a href="#events">Events</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" data-section>
+    <img src="hero-photo.jpg" alt="Parents' Voice group photo" />
+    <div class="hero-text">
+      <h1>The Parents’ Voice</h1>
+      <p>Empowering Parents • Supporting Education</p>
+      <a href="#mission" class="btn-primary">Learn More</a>
+    </div>
+  </section>
+
+  <!-- Mission / Intro Section -->
+  <section id="mission" class="intro-section" data-section>
+    <div class="intro-container">
+      <img src="about-photo.jpg" alt="Parents event" />
+      <div class="intro-text">
+        <h2>Welcome to Parents’ Voice USA!</h2>
+        <p><strong>Parents’ Voice USA</strong> is a volunteer-led group founded in 2009 by MJ Noor. We empower parents by providing clear, expert-backed guidance on educational challenges—from elementary school through college.</p>
+        <p>Contact us anytime at <a href="mailto:info@theparentsvoiceusa.com">info@theparentsvoiceusa.com</a> to learn about upcoming events and resources.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Placeholder Sections -->
+  <section id="team" data-section>
+    <h2>Meet Our Team</h2>
+    <!-- Team content goes here -->
+  </section>
+  <section id="sponsors" data-section>
+    <h2>Sponsors</h2>
+    <!-- Sponsors content goes here -->
+  </section>
+  <section id="events" data-section>
+    <h2>Upcoming Events</h2>
+    <!-- Events content goes here -->
+  </section>
+
+  <!-- Footer / Contact -->
+  <footer id="contact" class="site-footer" data-section>
+    <p>&copy; 2025 Parents’ Voice USA | Empowering parents in Orange County</p>
+  </footer>
+
+</body>
+</html>
+

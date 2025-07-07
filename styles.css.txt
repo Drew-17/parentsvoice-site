@@ -1,0 +1,122 @@
+/* Smooth scrolling */
+html { scroll-behavior: smooth; }
+
+/* Reset & base styles */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; color: #333; line-height: 1.5; }
+
+/* Header styling */
+.site-header {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  z-index: 1000;
+}
+.logo img { height: 50px; }
+.main-nav a {
+  margin-left: 1.5rem;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.main-nav a:hover { color: #0054a6; }
+
+/* Hero Section */
+.hero {
+  position: relative;
+  text-align: center;
+}
+.hero img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  display: block;
+}
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+.hero-text h1 {
+  font-size: 3rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+.hero-text p {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+.btn-primary {
+  background: #0054a6;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+.btn-primary:hover { background: #003f8a; }
+
+/* Section styling */
+section[data-section] {
+  padding: 4rem 2rem;
+  background: #f8f9fa;
+  border-bottom: 1px solid #e0e0e0;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s ease forwards;
+}
+section:nth-of-type(even) { background: #ffffff; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Intro Section layout */
+.intro-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.intro-container img {
+  flex: 1 1 300px;
+  max-width: 400px;
+  margin-right: 2rem;
+  border-radius: 8px;
+}
+.intro-text { flex: 2 1 300px; }
+.intro-text h2 { font-size: 2rem; margin-bottom: 1rem; }
+.intro-text p { margin-bottom: 1rem; }
+
+/* Footer styling */
+.site-footer {
+  background: #e9ecef;
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .intro-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .intro-container img {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+}
