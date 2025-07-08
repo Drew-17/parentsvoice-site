@@ -18,14 +18,20 @@ body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; color: #333; 
   z-index: 1000;
 }
 .logo img { height: 50px; }
+/* Nav link styling – bold and navy blue */
 .main-nav a {
   margin-left: 1.5rem;
-  color: #333;
+  color: #003366;        /* Navy blue color matching the logo */
+  font-weight: bold;     /* Makes the text bold */
   text-decoration: none;
-  font-weight: 500;
+  font-size: 1rem;
   transition: color 0.3s;
 }
-.main-nav a:hover { color: #0054a6; }
+
+/* Add a hover effect to indicate interactivity */
+.main-nav a:hover {
+  color: #0054a6;       /* Slightly lighter blue on hover */
+}
 
 /* Hero Section */
 .hero {
