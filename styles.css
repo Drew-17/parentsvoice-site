@@ -53,7 +53,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; color: #333; 
   content: "";
   position: absolute;
   inset: 0; /* shorthand for top/left/right/bottom = 0 */
-  background: rgba(0, 0, 128, 0.5); /* Adjust alpha for darkness */
+  background: rgba(0, 0, 128, 0.4); /* Adjust alpha for darkness */
   pointer-events: none;
   z-index: 1;
 }
