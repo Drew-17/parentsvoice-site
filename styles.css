@@ -49,7 +49,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; color: #333; 
 .hero-img-wrapper img {
   display: block;
   width: 100%;
-  height: 500px;         /* adjust height to your design */
+  height: 300px;         /* adjust height to your design */
   object-fit: cover;
   object-position: center 35%; /* shift focal point down slightly */
 }
