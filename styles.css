@@ -38,11 +38,19 @@ body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; color: #333; 
   position: relative;
   text-align: center;
 }
+.hero {
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('hero-photo.jpg') center/cover no-repeat;
+}
 .hero img {
   width: 100%;
   height: 500px;           /* adjust height as needed */
   object-fit: cover;
   object-position: center 35%;  /* shift vertical focus down 30% */
+}
+.hero img {
+  filter: brightness(50%);
 }
 .hero-text {
   position: absolute;
