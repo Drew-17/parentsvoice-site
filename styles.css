@@ -38,19 +38,36 @@ body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; color: #333; 
   position: relative;
   text-align: center;
 }
-.hero {
-  background: 
-    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('hero-photo.jpg') center/cover no-repeat;
-}
 .hero img {
   width: 100%;
   height: 500px;           /* adjust height as needed */
   object-fit: cover;
   object-position: center 35%;  /* shift vertical focus down 30% */
 }
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* shorthand for top/left/right/bottom = 0 */
+  background: rgba(0, 0, 0, 0.5); /* Adjust alpha for darkness */
+  pointer-events: none;
+  z-index: 1;
+}
+
 .hero img {
-  filter: brightness(50%);
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2; /* Ensures text sits above the overlay */
 }
 .hero-text {
   position: absolute;
