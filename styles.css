@@ -96,7 +96,6 @@ body {
 /* 5. Intro / Mission */
 .intro-section {
   scroll-snap-align: start;
-  min-height: 100vh;
   padding: 4rem 2rem;
   background: #f8f9fa;
 }
@@ -128,7 +127,6 @@ body {
 /* 6. Meet Our Team */
 .team-section {
   scroll-snap-align: start;
-  min-height: 100vh;
   padding: 4rem 2rem;
   background: #f8f9fa;
   text-align: center;
@@ -184,7 +182,6 @@ body {
 /* 7. Sponsors */
 .sponsors-section {
   scroll-snap-align: start;
-  min-height: 100vh;
   padding: 4rem 2rem;
   background: #fff;
 }
@@ -192,7 +189,6 @@ body {
 /* 8. Events */
 .events-section {
   scroll-snap-align: start;
-  min-height: 100vh;
   padding: 4rem 2rem;
   background: #f8f9fa;
 }
@@ -200,7 +196,6 @@ body {
 /* 9. Footer */
 .site-footer {
   scroll-snap-align: start;
-  min-height: 100vh;
   background: #e9ecef;
   text-align: center;
   padding: 2rem;
