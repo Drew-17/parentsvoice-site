@@ -179,11 +179,41 @@ body {
   color: #333;
 }
 
-/* 7. Sponsors */
+/* Sponsors Section */
 .sponsors-section {
-  scroll-snap-align: start;
+  scroll-snap-align: start;      /* maintains scroll-snap flow */ :contentReference[oaicite:5]{index=5}
   padding: 4rem 2rem;
   background: #fff;
+  text-align: center;
+}
+.sponsors-section h2 {
+  font-size: 2.5rem;
+  color: #003366;                /* navy brand color */
+  margin-bottom: 0.5rem;
+}
+.sponsors-tagline {
+  font-size: 1.2rem;
+  color: #0054a6;
+  margin-bottom: 1.5rem;
+}
+.sponsors-section p {
+  max-width: 700px;              /* constrain line length */ :contentReference[oaicite:6]{index=6}
+  margin: 1rem auto;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.btn-donate {
+  display: inline-block;
+  background: #0054a6;           /* matches tagline color */
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-top: 1rem;
+  transition: background 0.3s;
+}
+.btn-donate:hover {
+  background: #003f8a;
 }
 
 /* 8. Events */
