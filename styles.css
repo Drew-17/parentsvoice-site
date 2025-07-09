@@ -84,13 +84,15 @@ body {
 .hero-text p {
   font-size: 1.2rem;
 }
-/* Target every section except .hero */
-section:not(.hero) {
-  scroll-snap-align: start;   /* still snap to each section */    :contentReference[oaicite:3]{index=3}
-  min-height: auto;            /* let content determine height */   :contentReference[oaicite:4]{index=4}
-  /* keep your existing padding/background/etc. */
+/* Remove forced 100vh from these sections */
+.intro-section,
+.team-section,
+.sponsors-section,
+.events-section,
+.site-footer {
+  scroll-snap-align: start;  /* still snap to each section */
+  min-height: auto;          /* let height grow with content */
 }
-
 /* 5. Intro / Mission */
 .intro-section {
   scroll-snap-align: start;
