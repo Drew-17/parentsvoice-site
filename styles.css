@@ -49,7 +49,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; color: #333; 
   overflow: hidden;
 }
 
-.hero::before {
+.hero img ::before {
   content: "";
   position: absolute;
   inset: 0; /* shorthand for top/left/right/bottom = 0 */
