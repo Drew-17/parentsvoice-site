@@ -180,15 +180,18 @@ body {
 }
 
 /* Sponsors Section */
+/* Sponsors Section */
 .sponsors-section {
-  scroll-snap-align: start;      /* maintains scroll-snap flow */ :contentReference[oaicite:5]{index=5}
+  scroll-snap-align: start;
   padding: 4rem 2rem;
   background: #fff;
   text-align: center;
 }
+
+/* Heading & Tagline */
 .sponsors-section h2 {
   font-size: 2.5rem;
-  color: #003366;                /* navy brand color */
+  color: #003366;
   margin-bottom: 0.5rem;
 }
 .sponsors-tagline {
@@ -196,26 +199,52 @@ body {
   color: #0054a6;
   margin-bottom: 1.5rem;
 }
-.sponsors-section p {
-  max-width: 700px;              /* constrain line length */ :contentReference[oaicite:6]{index=6}
+
+/* Constrain, justify, & hyphenate text */
+.sponsors-content p {
+  max-width: 65ch;                   /* ~65 characters per line */ :contentReference[oaicite:7]{index=7}
   margin: 1rem auto;
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1.6;                  /* comfortable line-height */ 
+  text-align: justify;               /* even edges */ :contentReference[oaicite:9]{index=9}
+  text-justify: inter-word;          /* justification method */ :contentReference[oaicite:10]{index=10}
+  hyphens: auto;                     /* allow hyphenation */ :contentReference[oaicite:11]{index=11}
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  overflow-wrap: break-word;         /* break long words */ :contentReference[oaicite:12]{index=12}
 }
+
+/* Donate Button */
 .btn-donate {
   display: inline-block;
-  background: #0054a6;           /* matches tagline color */
+  background: #0054a6;
   color: #fff;
   padding: 0.75rem 1.5rem;
   border-radius: 4px;
   text-decoration: none;
-  margin-top: 1rem;
+  margin: 1rem 0;
+  font-weight: bold;                 /* emphasize the CTA */ :contentReference[oaicite:13]{index=13}
   transition: background 0.3s;
 }
 .btn-donate:hover {
   background: #003f8a;
 }
 
+/* Newsletter line smaller & italic */
+.newsletter {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #555;
+}
+
+/* Responsive tweak: narrower on small screens */
+@media (max-width: 768px) {
+  .sponsors-content p {
+    max-width: 90vw;                 /* use viewport width on mobile */
+  }
+}
 /* 8. Events */
 .events-section {
   scroll-snap-align: start;
