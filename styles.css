@@ -1,47 +1,34 @@
-/* 1. Smooth scroll + snap on html */
+/* 1. Smooth scrolling + snap */
 html {
-  scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;               /* smooth transitions */                 :contentReference[oaicite:7]{index=7}
+  scroll-snap-type: y mandatory;         /* vertical snap on each section */      :contentReference[oaicite:8]{index=8}
   height: 100%;
-  overflow-y: auto;
+  overflow-y: auto;                      /* make <html> the scroll container */   :contentReference[oaicite:9]{index=9}
 }
 
-/* 2. Reset & base */
+/* 2. Reset & Base */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin: 0; padding: 0; box-sizing: border-box;
 }
 body {
   min-height: 100%;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  color: #333;
-  line-height: 1.5;
+  color: #333; line-height: 1.5;
 }
 
 /* 3. Header */
 .site-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  position: sticky; top: 0; z-index: 1000;
   background: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1rem 2rem; box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 .logo img {
-  height: 50px;
-  display: block;
+  height: 50px; display: block;
 }
 .main-nav a {
-  margin-left: 1.5rem;
-  color: #003366;
-  font-weight: bold;
-  text-decoration: none;
-  font-size: 1rem;
-  transition: color 0.3s;
+  margin-left: 1.5rem; color: #003366; font-weight: bold;
+  text-decoration: none; font-size: 1rem; transition: color 0.3s;
 }
 .main-nav a:hover {
   color: #0054a6;
@@ -50,75 +37,48 @@ body {
 /* 4. Hero Section */
 .hero {
   position: relative;
-  scroll-snap-align: start;
-  min-height: 100vh;
+  scroll-snap-align: start;             /* snap to top of viewport */           :contentReference[oaicite:10]{index=10}
+  height: 80vh;                         /* 80% of viewport height */             :contentReference[oaicite:11]{index=11}
   overflow: hidden;
-}
-.hero {
-  /* remove aspect-ratio */
-  height: 80vh;          /* covers 80% of the screen */ :contentReference[oaicite:6]{index=6}
-  overflow: hidden;
-  position: relative;
 }
 .hero img {
-  display: block;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
+  display: block;                       /* remove inline gaps */                 :contentReference[oaicite:12]{index=12}
+  width: 100%; height: 100%;
+  object-fit: cover;                    /* fill container, crop excess */       :contentReference[oaicite:13]{index=13}
   object-position: center 55%;
 }
 .hero-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  position: absolute; top: 50%; left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 2;
-  color: #fff;
+  z-index: 2; color: #fff;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
   text-align: center;
 }
 .hero-text h1 {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
+  font-size: 3rem; margin-bottom: 0.5rem;
 }
 .hero-text p {
   font-size: 1.2rem;
 }
-/* Remove forced 100vh from these sections */
-.intro-section,
-.team-section,
-.sponsors-section,
-.events-section,
-.site-footer {
-  scroll-snap-align: start;  /* still snap to each section */
-  min-height: auto;          /* let height grow with content */
-}
+
 /* 5. Intro / Mission */
 .intro-section {
   scroll-snap-align: start;
-  padding: 4rem 2rem;
-  background: #f8f9fa;
+  padding: 4rem 2rem; background: #f8f9fa;
 }
 .intro-container {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  max-width: 900px;
-  margin: 0 auto;
+  display: flex; align-items: center; flex-wrap: wrap;
+  max-width: 900px; margin: 0 auto;             /* center content */                   :contentReference[oaicite:14]{index=14}
 }
 .intro-container img {
-  flex: 1 1 300px;
-  max-width: 400px;
-  margin-right: 2rem;
-  border-radius: 8px;
-  display: block;
+  flex: 1 1 300px; max-width: 400px;
+  margin-right: 2rem; border-radius: 8px; display: block;
 }
 .intro-text {
   flex: 2 1 300px;
 }
 .intro-text h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-size: 2rem; margin-bottom: 1rem;
 }
 .intro-text p {
   margin-bottom: 1rem;
@@ -127,139 +87,105 @@ body {
 /* 6. Meet Our Team */
 .team-section {
   scroll-snap-align: start;
-  padding: 4rem 2rem;
-  background: #f8f9fa;
-  text-align: center;
+  padding: 4rem 2rem; background: #f8f9fa; text-align: center;
 }
 .team-section h2 {
-  font-size: 2.5rem;
-  color: #003366;
-  margin-bottom: 2rem;
+  font-size: 2.5rem; color: #003366; margin-bottom: 2rem;
 }
 .team-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;   /* wrap on small screens */
-  gap: 2rem;         /* space between cards */
+  display: flex; justify-content: center; flex-wrap: wrap; gap: 2rem;  /* grid-like wrap */ :contentReference[oaicite:15]{index=15}
 }
 .team-member {
-  max-width: 320px;
-  text-align: center;
+  max-width: 320px; text-align: center;
 }
 .member-photo {
-  width: 200px;
-  height: 200px;
-  margin: 0 auto 1rem;
-  overflow: hidden;
-  border-radius: 50%;
-  border: 4px solid #0054a6;
+  width: 200px; height: 200px;
+  margin: 0 auto 1rem; overflow: hidden;
+  border-radius: 50%; border: 4px solid #0054a6;
 }
 .member-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center;
 }
 .member-info h3 {
-  font-size: 1.8rem;
-  color: #003366;
-  margin-bottom: 0.25rem;
+  font-size: 1.8rem; color: #003366; margin-bottom: 0.25rem;
 }
 .member-info .title {
-  font-size: 1rem;
-  font-weight: bold;
-  color: #0054a6;
+  font-size: 1rem; font-weight: bold; color: #0054a6;
   margin-bottom: 0.75rem;
 }
 .member-info .bio {
-  max-width: 280px;
-  margin: 0 auto;
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #333;
+  max-width: 280px; margin: 0 auto;
+  font-size: 1rem; line-height: 1.6; color: #333;
 }
 
-/* Sponsors Section */
-/* Grid container: two columns, gap between them */  
+/* 7. Sponsors Section */
+.sponsors-section {
+  scroll-snap-align: start;
+  padding: 4rem 2rem; background: #fff;
+}
+.sponsors-section h2 {
+  font-size: 2.5rem; color: #003366; text-align: center;
+  margin-bottom: 0.5rem;
+}
+.sponsors-tagline {
+  font-size: 1.2rem; color: #0054a6; text-align: center;
+  margin-bottom: 1.5rem;
+}
 .sponsors-grid {
-  display: grid;
-  grid-template-columns: 3fr 1fr;             /* text 3× wider than CTA */ :contentReference[oaicite:0]{index=0}
-  gap: 2rem;                                   /* space between columns */ :contentReference[oaicite:1]{index=1}
-  max-width: 1000px;
-  margin: 0 auto;                              /* center the grid itself */ :contentReference[oaicite:2]{index=2}
+  display: grid;                                                     :contentReference[oaicite:16]{index=16}
+  grid-template-columns: 3fr 1fr;                                     :contentReference[oaicite:17]{index=17}
+  gap: 2rem;                                                         :contentReference[oaicite:18]{index=18}
+  max-width: 1000px; margin: 0 auto;                                 :contentReference[oaicite:19]{index=19}
+  align-items: center;                                               :contentReference[oaicite:20]{index=20}
 }
-
-/* Left column – text styling */  
 .sponsors-text p {
-  margin-bottom: 1rem;
-  line-height: 1.6;
-  text-align: justify;                         /* even edges on both sides */ :contentReference[oaicite:3]{index=3}
-  hyphens: auto;                               /* graceful word breaks */ 
+  margin-bottom: 1rem; line-height: 1.6;
+  text-align: justify;                                               :contentReference[oaicite:21]{index=21}
+  hyphens: auto;                                                     :contentReference[oaicite:22]{index=22}
+  overflow-wrap: break-word;                                         :contentReference[oaicite:23]{index=23}
 }
-
-/* Right column – center the CTA vertically */  
 .sponsors-cta {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;                    /* vertical centering */ :contentReference[oaicite:5]{index=5}
-  align-items: center;                         /* horizontal centering */ :contentReference[oaicite:6]{index=6}
+  display: flex; flex-direction: column;
+  justify-content: center;                                           :contentReference[oaicite:24]{index=24}
+  align-items: center;                                               :contentReference[oaicite:25]{index=25}
 }
-
-/* Button styling (unchanged) */  
 .btn-donate {
-  background: #0054a6;
-  color: #fff;
-  padding: 0.75rem 1.5rem;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s;
+  background: #0054a6; color: #fff;
+  padding: 0.75rem 1.5rem; border-radius: 4px; text-decoration: none;
+  font-weight: bold; transition: background 0.3s;
+  margin-bottom: 1rem;
 }
 .btn-donate:hover {
   background: #003f8a;
 }
-
-/* Newsletter line smaller & italic below button */  
 .newsletter {
-  margin-top: 1rem;
-  font-size: 0.9rem;
-  font-style: italic;
-  color: #555;
-}
-
-/* Mobile fallback: single column */  
-@media (max-width: 768px) {
-  .sponsors-grid {
-    grid-template-columns: 1fr;                /* stack text and CTA */ :contentReference[oaicite:7]{index=7}
-  }
+  font-size: 0.9rem; font-style: italic; color: #555; text-align: center;
 }
 
 /* 8. Events */
 .events-section {
-  scroll-snap-align: start;
-  padding: 4rem 2rem;
-  background: #f8f9fa;
+  scroll-snap-align: start; padding: 4rem 2rem; background: #f8f9fa;
 }
 
 /* 9. Footer */
 .site-footer {
-  scroll-snap-align: start;
-  background: #e9ecef;
-  text-align: center;
-  padding: 2rem;
-  font-size: 0.9rem;
+  scroll-snap-align: start; background: #e9ecef;
+  text-align: center; padding: 2rem; font-size: 0.9rem;
 }
 
 /* 10. Responsive tweaks */
 @media (max-width: 768px) {
   .intro-container,
-  .team-container {
-    flex-direction: column;
-    align-items: center;
+  .team-container,
+  .sponsors-grid {
+    display: flex; flex-direction: column; align-items: center;  /* stack on mobile */ :contentReference[oaicite:26]{index=26}
   }
   .intro-container img,
   .member-photo {
-    margin-right: 0;
-    margin-bottom: 2rem;
+    margin-right: 0; margin-bottom: 2rem;
+  }
+  .sponsors-grid {
+    gap: 1.5rem;
   }
 }
