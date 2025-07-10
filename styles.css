@@ -120,49 +120,77 @@ body {
 }
 
 /* 7. Sponsors Section */
+/* Sponsors Section */
 .sponsors-section {
-  scroll-snap-align: start;
-  padding: 4rem 2rem; background: #fff;
+  scroll-snap-align: start;      /* maintain scroll-snap */       :contentReference[oaicite:7]{index=7}
+  padding: 4rem 2rem;
+  background: #fff;
 }
+
+/* Heading & Tagline */
 .sponsors-section h2 {
-  font-size: 2.5rem; color: #003366; text-align: center;
+  font-size: 2.5rem;
+  color: #003366;
+  text-align: center;
   margin-bottom: 0.5rem;
 }
 .sponsors-tagline {
-  font-size: 1.2rem; color: #0054a6; text-align: center;
+  font-size: 1.2rem;
+  color: #0054a6;
+  text-align: center;
   margin-bottom: 1.5rem;
 }
-.sponsors-grid {
-  display: grid;                                                     :contentReference[oaicite:16]{index=16}
-  grid-template-columns: 3fr 1fr;                                     :contentReference[oaicite:17]{index=17}
-  gap: 2rem;                                                         :contentReference[oaicite:18]{index=18}
-  max-width: 1000px; margin: 0 auto;                                 :contentReference[oaicite:19]{index=19}
-  align-items: center;                                               :contentReference[oaicite:20]{index=20}
+
+/* Flexbox single-column centering */
+.sponsors-content {
+  display: flex;                  /* turn on Flexbox */            :contentReference[oaicite:8]{index=8}
+  flex-direction: column;         /* stack items vertically */     :contentReference[oaicite:9]{index=9}
+  align-items: center;            /* center horizontally */        :contentReference[oaicite:10]{index=10}
+  max-width: 65ch;                /* optimal line length (~65) */ :contentReference[oaicite:11]{index=11}
+  margin: 0 auto;                 /* center the block */          :contentReference[oaicite:12]{index=12}
 }
-.sponsors-text p {
-  margin-bottom: 1rem; line-height: 1.6;
-  text-align: justify;                                               :contentReference[oaicite:21]{index=21}
-  hyphens: auto;                                                     :contentReference[oaicite:22]{index=22}
-  overflow-wrap: break-word;                                         :contentReference[oaicite:23]{index=23}
-}
-.sponsors-cta {
-  display: flex; flex-direction: column;
-  justify-content: center;                                           :contentReference[oaicite:24]{index=24}
-  align-items: center;                                               :contentReference[oaicite:25]{index=25}
-}
-.btn-donate {
-  background: #0054a6; color: #fff;
-  padding: 0.75rem 1.5rem; border-radius: 4px; text-decoration: none;
-  font-weight: bold; transition: background 0.3s;
+
+/* Paragraph typography */
+.sponsors-content p {
+  width: 100%;                    /* fill max-width only */  
+  text-align: justify;            /* even both edges */            :contentReference[oaicite:13]{index=13}
+  hyphens: auto;                  /* allow word-breaking */        :contentReference[oaicite:14]{index=14}
+  overflow-wrap: break-word;      /* break long words */           :contentReference[oaicite:15]{index=15}
+  line-height: 1.6;
   margin-bottom: 1rem;
+}
+
+/* Donate button centered */
+.btn-donate {
+  display: inline-block;
+  background: #0054a6;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 1rem auto;              /* center the button */         :contentReference[oaicite:16]{index=16}
+  transition: background 0.3s;
 }
 .btn-donate:hover {
   background: #003f8a;
 }
+
+/* Newsletter line below button */
 .newsletter {
-  font-size: 0.9rem; font-style: italic; color: #555; text-align: center;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #555;
+  text-align: center;
+  margin-top: 0.5rem;
 }
 
+/* Responsive fallback */
+@media (max-width: 768px) {
+  .sponsors-content {
+    max-width: 90vw;              /* full width on mobile */        :contentReference[oaicite:17]{index=17}
+  }
+}
 /* 8. Events */
 .events-section {
   scroll-snap-align: start; padding: 4rem 2rem; background: #f8f9fa;
