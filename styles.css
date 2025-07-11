@@ -38,6 +38,7 @@ body {
 .hero {
   position: relative;
   scroll-snap-align: start;             /* snap to top of viewport */           :contentReference[oaicite:10]{index=10}
+  background: url('hero-photo.jpg') center/cover no-repeat;
   height: 80vh;                         /* 80% of viewport height */             :contentReference[oaicite:11]{index=11}
   overflow: hidden;
 }
@@ -45,7 +46,7 @@ body {
   display: block;                       /* remove inline gaps */                 :contentReference[oaicite:12]{index=12}
   width: 100%; height: 100%;
   object-fit: cover;                    /* fill container, crop excess */       :contentReference[oaicite:13]{index=13}
-  object-position: center 55%;
+  object-position: center 30%;
 }
 .hero-text {
   position: absolute; top: 50%; left: 50%;
